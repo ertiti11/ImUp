@@ -1,16 +1,11 @@
-
-from pathlib import Path
-import glob
-
-
+import os
 
 def listimages():
-    images = []
+    dir_path = './images'
+    res = []
 
-    for name in glob.glob('backend/images/*'):
-        images.append(name.replace("\\", "/").replace("backend", ""))
-
+    for path in os.listdir(dir_path):
+        if os.path.isfile(os.path.join(dir_path, path)):
+            res.append("/image/"+path)
     
-    return images
-
-print(listimages())
+    return res
