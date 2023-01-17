@@ -5,7 +5,10 @@ from pydantic import BaseModel
 from listdir import listimages
 from config.db import conn
 from models.image import image
-print("si")
+
+
+
+
 router = APIRouter()
 
 
